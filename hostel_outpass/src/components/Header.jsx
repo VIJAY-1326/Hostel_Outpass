@@ -48,7 +48,7 @@ function Header() {
           >
             Sign In
           </Link>
-
+          <link>sign up</link>
         </div>
       </div>
     </header>
