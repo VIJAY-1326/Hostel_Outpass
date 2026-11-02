@@ -19,6 +19,13 @@ function Login() {
             </div>
         </div>
     </div>
+    <div  className="min-h-screen bg-gray-100">
+    <div className="max-w-full mx-auto bg-gray-100 rounded-lg shadow-md">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTow6P_oAIjsbN1Gx_znzWpYbUdRb2hzgLGCYd7T1g04A&s=10" alt="AITAM Logo" className="w-20 h-20 mx-auto mt-10" />
+        <h1 className="text-2xl font-bold text-center">Hostel GatePass Portal</h1>
+        <p className="text-center">Aditya Institute Of Technology And Management</p>
+    </div>
+    </div>
     </>
   );
 }
