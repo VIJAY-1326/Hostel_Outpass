@@ -42,7 +42,7 @@ function Dashboard() {
     <div className="flex h-[calc(100vh-152px)]  bg-[#f7f9fc]">
       
 {/* Sidebar */}
-<div className="w-80 shrink-0 bg-white border-r border-blue-300 p-4 flex flex-col h-full overflow-hidden">
+<div className="w-80 shrink-0 bg-white border-r border-blue-300 p-4 flex flex-col h-screen overflow-hidden">
 
   {/* Logo */}
   <div className="mb-8 px-2">

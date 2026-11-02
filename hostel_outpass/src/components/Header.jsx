@@ -11,9 +11,7 @@ function Header() {
 
         <Link to="/login" className="flex shrink-0 items-center gap-2 rounded-xl bg-[#173b78] px-5 py-3 text-sm font-bold text-white shadow-md transition duration-300 hover:bg-[#102d5e] hover:shadow-lg sm:px-7">
           Sign In
-          <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-6-6 6 6-6 6" />
-          </svg>
+         
         </Link>
       </div>
     </header>
