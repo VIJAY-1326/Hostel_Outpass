@@ -3,56 +3,20 @@ import { Link } from "react-router";
 
 function Header() {
   return (
-    <>
-    <header className="w-full bg-white border-b border-gray-200 shadow-sm sticky top-0 z-50">
-      <div className="max-w-[1520px] mx-auto px-6 md:px-10 py-4 flex items-center justify-between"> 
-        <div className="flex items-center gap-4"> 
-          <div className="w-14 h-14 rounded-xl shadow-md flex items-center justify-center overflow-hidden">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTow6P_oAIjsbN1Gx_znzWpYbUdRb2hzgLGCYd7T1g04A&s=10"
-              alt="AITAM Logo"
-              className="w-full h-full object-contain"
-            />
-          </div>
+    <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white shadow-sm">
+      <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-5 p-2 sm:px-10 lg:px-14">
+        <Link to="/" className="flex items-center">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZPhklABSoD8MAkIojwEqq76ZYNQfKrjHKsv_-TAGyPw&s=10" alt="AITAM - Aditya Institute of Technology and Management"className="w-30" />
+        </Link>
 
-         
-          <div>
-            <p className="text-red-600 text-xs font-bold tracking-[2px] uppercase">
-              AITAM (AUTONOMOUS)
-            </p>
-
-            <div className="flex items-center flex-wrap gap-2">
-              <h1 className="text-2xl font-extrabold text-slate-900">
-                CampusPass
-              </h1>
-
-              <span className="hidden sm:block text-gray-300">|</span>
-
-              <span className="text-xs font-bold tracking-wider text-slate-400">
-                HOSTEL OUTPASS ERP
-              </span>
-            </div>
-
-            <p className="text-xs text-slate-500 mt-1">
-              Aditya Institute of Technology and Management
-            </p>
-          </div>
-        </div>
-
-       
-        <div className="flex items-center gap-5">
-
-          <Link
-            to="/login"
-            className="hidden sm:block text-sm font-semibold text-slate-700 hover:text-blue-600 transition"
-          >
-            Sign In
-          </Link>
-
-        </div>
+        <Link to="/login" className="flex shrink-0 items-center gap-2 rounded-xl bg-[#173b78] px-5 py-3 text-sm font-bold text-white shadow-md transition duration-300 hover:bg-[#102d5e] hover:shadow-lg sm:px-7">
+          Sign In
+          <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-6-6 6 6-6 6" />
+          </svg>
+        </Link>
       </div>
     </header>
-    </>
   );
 }
 
