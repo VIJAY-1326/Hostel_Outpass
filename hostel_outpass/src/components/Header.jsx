@@ -4,13 +4,9 @@ import { Link } from "react-router";
 function Header() {
   return (
     <>
-    <header className="w-full bg-white border-b border-gray-200 shadow-sm">
-      <div className="max-w-[1520px] mx-auto px-6 md:px-10 py-4 flex items-center justify-between">
-
-        
-        <div className="flex items-center gap-4">
-
-          
+    <header className="w-full bg-white border-b border-gray-200 shadow-sm sticky top-0 z-50">
+      <div className="max-w-[1520px] mx-auto px-6 md:px-10 py-4 flex items-center justify-between"> 
+        <div className="flex items-center gap-4"> 
           <div className="w-14 h-14 rounded-xl shadow-md flex items-center justify-center overflow-hidden">
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTow6P_oAIjsbN1Gx_znzWpYbUdRb2hzgLGCYd7T1g04A&s=10"
@@ -51,14 +47,6 @@ function Header() {
             className="hidden sm:block text-sm font-semibold text-slate-700 hover:text-blue-600 transition"
           >
             Sign In
-          </Link>
-
-          <Link
-            to="/login"
-            className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-2xl text-sm font-bold shadow-md hover:shadow-lg transition-all duration-200"
-          >
-            Sign In / Apply
-            <span className="text-lg">›</span>
           </Link>
 
         </div>
