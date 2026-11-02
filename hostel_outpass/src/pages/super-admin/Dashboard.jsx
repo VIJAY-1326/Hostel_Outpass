@@ -18,6 +18,12 @@ function Dashboard() {
         >
           Dashboard
         </button>
+        <button
+          onClick={() => setActiveMenu("Users")}
+          className="mt-2 w-full rounded-lg bg-white p-3 text-left text-black"
+        >
+          Users
+        </button>
       </div>
 
       {/* Main Content */}
