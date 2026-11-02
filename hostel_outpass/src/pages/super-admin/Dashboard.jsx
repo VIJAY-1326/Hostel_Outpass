@@ -52,7 +52,7 @@ function Dashboard() {
   </div>
 
   {/* Menu Items + Logout */}
-  <div className="flex-1 min-h-0 space-y-2 overflow-y-auto">
+  <div className="flex-1 min-h-0 space-y-2 overflow-y-auto shadow-inner">
 
     {menuItems.map((item) => {
       const Icon = item.icon;
@@ -74,15 +74,16 @@ function Dashboard() {
         </button>
       );
               })}
-                {/* Logout */}
+              </div>
+              {/* Logout */}
                  <div className="border-t border-gray-200 mt-4 pt-3">
                   <button className="w-full flex items-center gap-3 p-3 text-left text-red-500">
                     <LogOut size={19} />
                       Logout
                   </button>
                 </div>
-              </div>
            </div>
+           
 
 
       {/* Main Content */}
