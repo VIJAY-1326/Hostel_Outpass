@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import { Routes, Route } from "react-router";
 import Login from "./pages/Login";
 import Dashboard from "./pages/super-admin/Dashboard";
+import StudentDashboard from "./pages/student/StudentDashboard";  
 
 function Home() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
          <Route path="/super-admin" element={<Dashboard />} />
+         <Route path="/student" element={<StudentDashboard />} />
       </Routes>
     </>
   );
