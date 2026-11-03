@@ -126,6 +126,8 @@ function SuperAdminSidebar() {
         {activeMenu === "Reports" && <Reports />}
         {/* Settings page*/}
         {activeMenu === "Account Settings" && <SuperAdminSettings />}
+        {/* Dashboard page*/}
+        {activeMenu === "Dashboard" && <SuperAdminDashboard />}
       </div>
     </div>
   );
