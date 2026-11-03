@@ -1,4 +1,4 @@
-import Header from "./components/Header";
+import Header from "./components/common/Header";
 import { Routes, Route } from "react-router";
 import Login from "./pages/Login";
 import SuperAdminSidebar from "./components/organisms/SuperAdminSidebar";
@@ -6,6 +6,7 @@ import StudentSidebar from "./components/organisms/StudentSidebar";
 import CaretakerSidebar from "./components/organisms/CaretakerSidebar";
 import SecuritySidebar from "./components/organisms/SecuritySidebar";
 import HostelAdminSidebar from "./components/organisms/HostelAdminSidebar";
+import CaretakerDashboard from "./pages/caretaker/CaretakerDashboard";
 
 
 function Home() {

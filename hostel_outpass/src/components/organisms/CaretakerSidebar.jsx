@@ -1,4 +1,5 @@
 import { useState } from "react";
+import CaretakerDashboard from "../../pages/caretaker/CaretakerDashboard";
 
 import {
   LayoutDashboard,
@@ -87,73 +88,11 @@ function CaretakerSidebar() {
         </div>
 
       </div>
-
       {/* Main Content */}
       <div className="flex-1 min-w-0 min-h-0 h-full overflow-y-auto overflow-x-hidden p-6 md:p-10">
-
-        {/* Dashboard Page */}
-        {activeMenu === "Dashboard" && (
-          <div>
-
-            {/* Welcome Header */}
-            <div className="flex flex-wrap items-center justify-between gap-4 border-b border-gray-200 pb-6">
-
-              <div>
-                <p className="text-xs font-semibold tracking-widest text-[#09428f]">
-                  CARETAKER DASHBOARD
-                </p>
-
-                <h1
-                  className="mt-2 text-2xl md:text-3xl font-bold text-gray-900"
-                  style={{ fontFamily: "Georgia, serif" }}
-                >
-                  Welcome back, Caretaker
-                </h1>
-              </div>
-
-              <div className="flex items-center gap-3">
-
-                <button className="bg-white border rounded-lg px-4 py-2 text-sm hover:bg-gray-50">
-                  Notifications
-                </button>
-
-                <div className="w-10 h-10 rounded-full bg-[#09428f] text-white flex items-center justify-center font-bold">
-                  CT
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-        )}
-
-        {/* Other Menu Pages */}
-        {activeMenu !== "Dashboard" && (
-          <div>
-
-            <p className="text-xs font-semibold tracking-widest text-[#09428f]">
-              CARETAKER PANEL
-            </p>
-
-            <h1
-              className="mt-2 text-2xl md:text-3xl font-bold text-gray-900"
-              style={{ fontFamily: "Georgia, serif" }}
-            >
-              {activeMenu}
-            </h1>
-
-            <div className="mt-6 bg-white rounded-xl border p-6 shadow-sm">
-              <p className="text-gray-600">
-                {activeMenu} Page Content
-              </p>
-            </div>
-
-          </div>
-        )}
-
+        {activeMenu === "CaretakerDashboard" && <CaretakerUser />}
       </div>
-
+      
     </div>
   );
 }
