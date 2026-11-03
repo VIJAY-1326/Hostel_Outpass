@@ -29,6 +29,7 @@ function Sidebar({ activeMenu, setActiveMenu }) {
     { name: "QR Code Status", icon: QrCode },
     { name: "Gate Transactions", icon: ArrowLeftRight },
     { name: "Late Return Monitoring", icon: ClockAlert },
+    { name: "Notifications", icon: Bell },
     { name: "My Profile", icon: UserRound },
     { name: "Settings", icon: Settings }
   ];
@@ -51,14 +52,16 @@ function Sidebar({ activeMenu, setActiveMenu }) {
 
           let buttonStyle =
             "text-gray-600 hover:bg-blue-50 hover:text-[#09428f]";
+
           if (activeMenu === item.name) {
             buttonStyle = "bg-[#09428f] text-white shadow-md";
           }
+
           return (
             <button
               key={item.name}
               onClick={() => setActiveMenu(item.name)}
-              className={`w-full flex items-center gap-3 rounded-xl p-3 text-left text-sm ${buttonStyle}`}
+              className={`w-full flex items-center gap-3 rounded-xl p-3 text-left text-sm font-medium transition-colors ${buttonStyle}`}
             >
               <Icon size={19} />
               <span>{item.name}</span>
@@ -66,14 +69,15 @@ function Sidebar({ activeMenu, setActiveMenu }) {
           );
         })}
 
-      </div>
-
-      {/* Logout */}
-      <div className="border-t pt-3 mt-3 shrink-0">
-        <button className="w-full flex items-center gap-3 p-3 text-left text-red-500 hover:bg-red-50 rounded-xl">
+        {/* Logout */}
+        <button
+          onClick={() => console.log("Logout clicked")}
+          className="w-full flex items-center gap-3 rounded-xl p-3 text-left text-sm font-medium text-red-500 hover:bg-red-50 transition-colors"
+        >
           <LogOut size={19} />
-          Logout
+          <span>Logout</span>
         </button>
+
       </div>
     </div>
   );
