@@ -24,14 +24,12 @@ function StudentSidebar() {
   const menuItems = [
     { name: "Dashboard", icon: LayoutDashboard },
     { name: "Apply for Outpass", icon: FilePlus },
-    { name: "My Outpasses", icon: ClipboardList },
     { name: "Pending Requests", icon: Clock },
     { name: "Approved Outpasses", icon: ClipboardCheck },
     { name: "My QR Code", icon: QrCode },
-    { name: "Outpass History", icon: History },
+    { name: "Outpass & History", icon: History },
     { name: "Help & Support", icon: Headset },
     { name: "Account Settings", icon: UserCog },
-    { name: "QR Code Records", icon: ScanLine },
     { name: "Late Returns", icon: ClockAlert },
     { name: "Reports", icon: ChartNoAxesCombined },
     { name: "Settings", icon: Settings }
@@ -110,7 +108,7 @@ function StudentSidebar() {
                   className="mt-2 text-2xl md:text-3xl font-bold text-gray-900"
                   style={{ fontFamily: "Georgia, serif" }}
                 >
-                  Welcome back, Super Admin
+                  Welcome back, Student Panel
                 </h1>
               </div>
 

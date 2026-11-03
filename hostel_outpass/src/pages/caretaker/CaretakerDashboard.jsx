@@ -1,6 +1,6 @@
 
 import { Bell } from "lucide-react";
-import Sidebar from "./CaretakerSidebar";
+import Sidebar from "../../components/organisms/CaretakerSidebar";
 
 function CaretakerDashboard() {
   return (

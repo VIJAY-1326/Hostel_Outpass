@@ -1,36 +1,41 @@
-
 import { useState } from "react";
 
 import {
   LayoutDashboard,
   ClipboardList,
-  KeyRound,
-  ClipboardX,
+  ShieldCheck,
+  Clock,
   ClipboardCheck,
-  FileClock,
+  ClipboardX,
+  History,
   GraduationCap,
+  BedDouble,
+  Users,
+  ClockAlert,
   QrCode,
   ArrowLeftRight,
-  ClockAlert,
   UserRound,
   Settings,
   LogOut
 } from "lucide-react";
 
-function CaretakerSidebar() {
+function HostelAdminSidebar() {
   const [activeMenu, setActiveMenu] = useState("Dashboard");
 
   const menuItems = [
     { name: "Dashboard", icon: LayoutDashboard },
     { name: "Out-pass Requests", icon: ClipboardList },
-    { name: "OTP Verification", icon: KeyRound },
-    { name: "Rejected History", icon: ClipboardX },
-    { name: "Approval History", icon: ClipboardCheck },
-    { name: "Out-pass History", icon: FileClock },
-    { name: "Student Details", icon: GraduationCap },
-    { name: "QR Code Status", icon: QrCode },
+    { name: "OTP Verification", icon: ShieldCheck },
+    { name: "Pending Approvals", icon: Clock },
+    { name: "Approved Out-passes", icon: ClipboardCheck },
+    { name: "Rejected Out-passes", icon: ClipboardX },
+    { name: "Outpass History", icon: History },
+    { name: "Hostel Students", icon: GraduationCap },
+    { name: "Rooms & Occupancy", icon: BedDouble },
+    { name: "Caretaker Management", icon: Users },
+    { name: "Gate & Reports", icon: ClockAlert },
+    { name: "QR Code Records", icon: QrCode },
     { name: "Gate Transactions", icon: ArrowLeftRight },
-    { name: "Late Return Monitoring", icon: ClockAlert },
     { name: "My Profile", icon: UserRound },
     { name: "Settings", icon: Settings }
   ];
@@ -42,9 +47,9 @@ function CaretakerSidebar() {
       <div className="w-80 shrink-0 bg-white border-r border-blue-300 p-4 flex flex-col h-full overflow-hidden">
 
         {/* Logo */}
-        <div className="mb-8 px-2 shrink-0">
+        <div className="mb-8 px-2 shrink-0 " >
           <h2 className="text-2xl font-bold text-[#09428f]">
-            Caretaker Panel
+            Hostel Admin Panel
           </h2>
         </div>
 
@@ -101,14 +106,14 @@ function CaretakerSidebar() {
 
               <div>
                 <p className="text-xs font-semibold tracking-widest text-[#09428f]">
-                  CARETAKER DASHBOARD
+                  HOSTEL ADMIN DASHBOARD
                 </p>
 
                 <h1
                   className="mt-2 text-2xl md:text-3xl font-bold text-gray-900"
                   style={{ fontFamily: "Georgia, serif" }}
                 >
-                  Welcome back, Caretaker
+                  Welcome back, Hostel Admin
                 </h1>
               </div>
 
@@ -119,7 +124,7 @@ function CaretakerSidebar() {
                 </button>
 
                 <div className="w-10 h-10 rounded-full bg-[#09428f] text-white flex items-center justify-center font-bold">
-                  CT
+                  SA
                 </div>
 
               </div>
@@ -134,7 +139,7 @@ function CaretakerSidebar() {
           <div>
 
             <p className="text-xs font-semibold tracking-widest text-[#09428f]">
-              CARETAKER PANEL
+              HOSTEL ADMIN PANEL
             </p>
 
             <h1
@@ -159,4 +164,4 @@ function CaretakerSidebar() {
   );
 }
 
-export default CaretakerSidebar;
+export default HostelAdminSidebar;
