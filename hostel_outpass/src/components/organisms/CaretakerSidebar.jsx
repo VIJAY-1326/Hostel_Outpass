@@ -90,7 +90,7 @@ function CaretakerSidebar() {
       </div>
       {/* Main Content */}
       <div className="flex-1 min-w-0 min-h-0 h-full overflow-y-auto overflow-x-hidden p-6 md:p-10">
-        {activeMenu === "CaretakerDashboard" && <CaretakerUser />}
+        {activeMenu === "CaretakerDashboard" && <CaretakerDashboard />}
       </div>
       
     </div>
