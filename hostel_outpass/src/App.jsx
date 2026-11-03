@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/super-admin/Dashboard";
 import StudentDashboard from "./pages/student/StudentDashboard";  
 
+
 function Home() {
   return (
     <div className="px-10 py-10 bg-gray-100 min-h-screen">
@@ -23,6 +24,10 @@ function App() {
         <Route path="/login" element={<Login />} />
          <Route path="/super-admin" element={<Dashboard />} />
          <Route path="/student" element={<StudentDashboard />} />
+         <Route
+          path="/caretaker"
+          element={<CaretakerDashboard />}
+        />
       </Routes>
     </>
   );
