@@ -1,6 +1,20 @@
 
 import { useState } from "react";
 import Users from "../../pages/super-admin/Users";
+import SuperAdminDashboard from "../../pages/super-admin/SuperAdminDashboard";
+import Students from "../../pages/super-admin/Students";
+import HostelAdmin from "../../pages/super-admin/HostelAdmin";
+import Caretaker from "../../pages/super-admin/Caretaker";
+import SecurityStaff from "../../pages/super-admin/SecurityStaff";
+import HostelBlocks from "../../pages/super-admin/HostelBlocks";
+import Outpass from "../../pages/super-admin/Outpass";
+import GateTransactions from "../../pages/super-admin/GateTransactions";
+import OtpVerificationLogs from "../../pages/super-admin/OtpVerificationLogs";
+import QrCodesRecords from "../../pages/super-admin/QrCodesRecords";
+import LateReturns from "../../pages/super-admin/LateReturns";
+import AduitLogs from "../../pages/super-admin/AuditLogs";
+import Reports from "../../pages/super-admin/Reports";
+import SuperAdminSettings from "../../pages/super-admin/SuperAdminSettings";
 
 import {
   LayoutDashboard,
@@ -38,7 +52,7 @@ function SuperAdminSidebar() {
     { name: "Late Returns", icon: ClockAlert },
     { name: "Audit Logs", icon: FileText },
     { name: "Reports", icon: BarChart3 },
-    { name: "Settings", icon: Settings }
+    { name: "Setting", icon: Settings }
   ];
 
   return (
@@ -80,10 +94,40 @@ function SuperAdminSidebar() {
           </button>
         </div>
       </div>
+
+
       {/* Main Content */}
       <div className="flex-1 min-w-0 min-h-0 h-full overflow-y-auto overflow-x-hidden p-6 md:p-10">
+        {/* Dashboard Page */}
+        {activeMenu === "Dashboard" && <SuperAdminDashboard />}
         {/* Users Page */}
         {activeMenu === "Users" && <Users />}
+        {/* Students page*/}
+        {activeMenu === "Students" && <Students />}
+        {/* Hostel Admin page*/}
+        {activeMenu === "Hostel Admins" && <HostelAdmin />}
+        {/* Caretaker page*/}
+        {activeMenu === "Caretakers" && <Caretaker />}
+        {/* Security Staff page*/}
+        {activeMenu === "Security Staff" && <SecurityStaff />}
+        {/* Hostel Blocks page*/}
+        {activeMenu === "Hostel Blocks" && <HostelBlocks />}
+        {/* Outpass page*/}
+        {activeMenu === "Outpasses" && <Outpass />}
+        {/* Gate Transactions page*/}
+        {activeMenu === "Gate Transactions" && <GateTransactions />}
+        {/* OTP Verification Logs page*/}
+        {activeMenu === "OTP Verification Logs" && <OtpVerificationLogs />}
+        {/* QR Code Records page*/}
+        {activeMenu === "QR Code Records" && <QrCodesRecords />}
+        {/* Late Returns page*/}
+        {activeMenu === "Late Returns" && <LateReturns />}
+        {/* Audit Logs page*/}
+        {activeMenu === "Audit Logs" && <AduitLogs />}
+        {/* Reports page*/}
+        {activeMenu === "Reports" && <Reports />}
+        {/* Settings page*/}
+        {activeMenu === "Setting" && <SuperAdminSettings />}
       </div>
     </div>
   );
