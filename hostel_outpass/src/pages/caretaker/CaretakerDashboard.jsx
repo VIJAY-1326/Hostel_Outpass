@@ -1,12 +1,12 @@
 
 import { Bell } from "lucide-react";
-import Sidebar from "./Sidebar";
+import Sidebar from "./CaretakerSidebar";
 
 function CaretakerDashboard() {
   return (
     <div className="flex h-[calc(100vh-64px)] overflow-hidden bg-[#f7f9fc]">
       {/* Sidebar */}
-      <Sidebar />
+      <CaretakerSidebar />
       {/* Main Content */}
       <div className="flex-1 min-w-0 p-6 md:p-10">
         {/* Welcome Header */}

@@ -1,8 +1,11 @@
 import Header from "./components/Header";
 import { Routes, Route } from "react-router";
 import Login from "./pages/Login";
-import Dashboard from "./pages/super-admin/Dashboard";
-import StudentDashboard from "./pages/student/StudentDashboard";  
+import SuperAdminSidebar from "./pages/super-admin/SuperAdminSidebar";
+import StudentSidebar from "./pages/student/StudentSidebar"; 
+import CaretakerSidebar from "./pages/caretaker/CaretakerSidebar";
+import SecuritySidebar from "./pages/security/SecuritySidebar";
+import HostelAdminSidebar from "./pages/hostel-admin/HostelAdminSidebar";
 
 
 function Home() {
@@ -22,12 +25,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-         <Route path="/super-admin" element={<Dashboard />} />
-         <Route path="/student" element={<StudentDashboard />} />
-         <Route
-          path="/caretaker"
-          element={<CaretakerDashboard />}
-        />
+         <Route path="/super-admin" element={<SuperAdminSidebar />} />
+         <Route path="/student" element={<StudentSidebar />} />
+         <Route path="/caretaker" element={<CaretakerSidebar />} />
+         <Route path="/security" element={<SecuritySidebar />} />
+         <Route path="/hostel-admin" element={<HostelAdminSidebar />} />
       </Routes>
     </>
   );
