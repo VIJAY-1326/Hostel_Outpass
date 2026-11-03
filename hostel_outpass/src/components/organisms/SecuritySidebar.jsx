@@ -1,5 +1,17 @@
 
 import { useState } from "react";
+import SecurityDashboard from "../../pages/security/SecurityDashboard";
+import ScanQRCode from "../../pages/security/ScanQRCode";
+import ManualQRReference from "../../pages/security/ManualQRReference";
+import CheckOutRecords from "../../pages/security/CheckOutRecords";
+import CheckInRecords from "../../pages/security/CheckInRecords";
+import RecentTransactions from "../../pages/security/RecentTransactions";
+import LateReturns from "../../pages/security/LateReturns";
+import TransactionSearch from "../../pages/security/TransactionSearch";
+import MyProfile from "../../pages/security/MyProfile";
+import Reports from "../../pages/security/Reports";
+import OutpassHistory from "../../pages/security/OutpassHistory";
+import AccountSettings from "../../pages/security/AccountSettings";
 
 import {
   LayoutDashboard,
@@ -32,7 +44,7 @@ function SecuritySidebar() {
     { name: "My Profile", icon: UserRound },
     { name: "Reports", icon: ChartNoAxesCombined },
     { name: "Outpass History", icon: History },
-    { name: "Settings", icon: Settings }
+    { name: "Account Settings", icon: Settings }
   ];
 
   return (
@@ -91,68 +103,30 @@ function SecuritySidebar() {
 
       {/* Main Content */}
       <div className="flex-1 min-w-0 min-h-0 h-full overflow-y-auto overflow-x-hidden p-6 md:p-10">
-
         {/* Dashboard Page */}
-        {activeMenu === "Dashboard" && (
-          <div>
-
-            {/* Welcome Header */}
-            <div className="flex flex-wrap items-center justify-between gap-4 border-b border-gray-200 pb-6">
-
-              <div>
-                <p className="text-xs font-semibold tracking-widest text-[#09428f]">
-                  SECURITY DASHBOARD
-                </p>
-
-                <h1
-                  className="mt-2 text-2xl md:text-3xl font-bold text-gray-900"
-                  style={{ fontFamily: "Georgia, serif" }}
-                >
-                  Welcome back, Security Officer
-                </h1>
-              </div>
-
-              <div className="flex items-center gap-3">
-
-                <button className="bg-white border rounded-lg px-4 py-2 text-sm hover:bg-gray-50">
-                  Notifications
-                </button>
-
-                <div className="w-10 h-10 rounded-full bg-[#09428f] text-white flex items-center justify-center font-bold">
-                  SA
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-        )}
-
-        {/* Other Menu Pages */}
-        {activeMenu !== "Dashboard" && (
-          <div>
-
-            <p className="text-xs font-semibold tracking-widest text-[#09428f]">
-              SECURITY PANEL
-            </p>
-
-            <h1
-              className="mt-2 text-2xl md:text-3xl font-bold text-gray-900"
-              style={{ fontFamily: "Georgia, serif" }}
-            >
-              {activeMenu}
-            </h1>
-
-            <div className="mt-6 bg-white rounded-xl border p-6 shadow-sm">
-              <p className="text-gray-600">
-                {activeMenu} Page Content
-              </p>
-            </div>
-
-          </div>
-        )}
-
+        {activeMenu === "Dashboard" && <SecurityDashboard />}
+        {/* Scan QR Code Page */}
+        {activeMenu === "Scan QR Code" && <ScanQRCode />}
+        {/* Manual QR Reference Page */}
+        {activeMenu === "Manual QR Reference" && <ManualQRReference />}
+        {/* Check Out Records Page */}
+        {activeMenu === "Check-Out Records" && <CheckOutRecords />}
+        {/* Check In Records Page */}
+        {activeMenu === "Check-In Records" && <CheckInRecords />}
+        {/* Recent Transactions Page */}
+        {activeMenu === "Recent Transactions" && <RecentTransactions />}
+        {/* Late Returns Page */}
+        {activeMenu === "Late Returns" && <LateReturns />}
+        {/* Transaction Search Page */}
+        {activeMenu === "Transaction Search" && <TransactionSearch />}
+        {/* My Profile Page */}
+        {activeMenu === "My Profile" && <MyProfile />}
+        {/* Reports Page */}
+        {activeMenu === "Reports" && <Reports />}
+        {/* Outpass History Page */}
+        {activeMenu === "Outpass History" && <OutpassHistory />}
+        {/* Account Settings Page */}
+        {activeMenu === "Account Settings" && <AccountSettings />}
       </div>
 
     </div>
