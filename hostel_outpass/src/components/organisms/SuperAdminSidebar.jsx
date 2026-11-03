@@ -52,7 +52,7 @@ function SuperAdminSidebar() {
     { name: "Late Returns", icon: ClockAlert },
     { name: "Audit Logs", icon: FileText },
     { name: "Reports", icon: BarChart3 },
-    { name: "Setting", icon: Settings }
+    { name: "Account Settings", icon: Settings }
   ];
 
   return (
@@ -127,7 +127,7 @@ function SuperAdminSidebar() {
         {/* Reports page*/}
         {activeMenu === "Reports" && <Reports />}
         {/* Settings page*/}
-        {activeMenu === "Setting" && <SuperAdminSettings />}
+        {activeMenu === "Account Settings" && <SuperAdminSettings />}
       </div>
     </div>
   );
