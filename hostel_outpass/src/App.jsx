@@ -1,11 +1,11 @@
 import Header from "./components/Header";
 import { Routes, Route } from "react-router";
 import Login from "./pages/Login";
-import SuperAdminSidebar from "./pages/super-admin/SuperAdminSidebar";
-import StudentSidebar from "./pages/student/StudentSidebar"; 
-import CaretakerSidebar from "./pages/caretaker/CaretakerSidebar";
-import SecuritySidebar from "./pages/security/SecuritySidebar";
-import HostelAdminSidebar from "./pages/hostel-admin/HostelAdminSidebar";
+import SuperAdminSidebar from "./components/organisms/SuperAdminSidebar";
+import StudentSidebar from "./components/organisms/StudentSidebar"; 
+import CaretakerSidebar from "./components/organisms/CaretakerSidebar";
+import SecuritySidebar from "./components/organisms/SecuritySidebar";
+import HostelAdminSidebar from "./components/organisms/HostelAdminSidebar";
 
 
 function Home() {
