@@ -1,5 +1,15 @@
 import { useState } from "react";
 import CaretakerDashboard from "../../pages/caretaker/CaretakerDashboard";
+import OutPassRequests from "../../pages/caretaker/OutPassRequests";
+import OTPVerification from "../../pages/caretaker/OTPVerification";
+import RejectedHistory from "../../pages/caretaker/RejectedHistory";
+import ApprovalHistory from "../../pages/caretaker/ApprovalHistory";
+import StudentDetails from "../../pages/caretaker/StudentDetails";
+import QRCodeStatus from "../../pages/caretaker/QRCodeStatus";
+import GateTransactions from "../../pages/caretaker/GateTransactions";
+import LateReturn from "../../pages/caretaker/LateReturn";
+import MyProfile from "../../pages/caretaker/MyProfile";
+import AccountSettings from "../../pages/caretaker/AccountSettings";
 
 import {
   LayoutDashboard,
@@ -26,13 +36,12 @@ function CaretakerSidebar() {
     { name: "OTP Verification", icon: KeyRound },
     { name: "Rejected History", icon: ClipboardX },
     { name: "Approval History", icon: ClipboardCheck },
-    { name: "Out-pass History", icon: FileClock },
     { name: "Student Details", icon: GraduationCap },
     { name: "QR Code Status", icon: QrCode },
     { name: "Gate Transactions", icon: ArrowLeftRight },
     { name: "Late Return Monitoring", icon: ClockAlert },
     { name: "My Profile", icon: UserRound },
-    { name: "Settings", icon: Settings }
+    { name: "Account Settings", icon: Settings }
   ];
 
   return (
@@ -90,7 +99,17 @@ function CaretakerSidebar() {
       </div>
       {/* Main Content */}
       <div className="flex-1 min-w-0 min-h-0 h-full overflow-y-auto overflow-x-hidden p-6 md:p-10">
-        {activeMenu === "CaretakerDashboard" && <CaretakerDashboard />}
+        {activeMenu === "Dashboard" && <CaretakerDashboard />}
+        {activeMenu === "Out-pass Requests" && <OutPassRequests />}
+        {activeMenu === "OTP Verification" && <OTPVerification />}
+        {activeMenu === "Rejected History" && <RejectedHistory />}
+        {activeMenu === "Approval History" && <ApprovalHistory />}
+        {activeMenu === "Student Details" && <StudentDetails />}
+        {activeMenu === "QR Code Status" && <QRCodeStatus />}
+        {activeMenu === "Gate Transactions" && <GateTransactions />}
+        {activeMenu === "Late Return Monitoring" && <LateReturn />}
+        {activeMenu === "My Profile" && <MyProfile />}
+        {activeMenu === "Account Settings" && <AccountSettings />}
       </div>
       
     </div>
